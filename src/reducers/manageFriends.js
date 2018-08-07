@@ -3,7 +3,8 @@ export function manageFriends(state, action){
     case 'ADD_FRIEND':
       return { ...state, friends: [...state.friends, action.friend]}
     case 'REMOVE_FRIEND':
-      return { ...state, friends: [...state.friends, action.friend]}
+      const i = state.friends.findIndex(item => item.id === action.id)
+      return { ...state, friends: [...state.friends.slice(0, i),...state.friends.slice(i+1)]}
     default:
       return { friends: [ { name: 'Avi', hometown: 'NYC', id: 100 } ]}
   }
