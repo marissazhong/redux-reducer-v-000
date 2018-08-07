@@ -1,6 +1,6 @@
-export function managePresents(state={presents: 0,}, action){
+export function managePresents(state={numberOfPresents: 0,}, action){
   switch (action.type) {
     case 'INCREASE':
-      return {presents: state.presents + 1}
+      return {numberOfPresents: state.numberOfPresents + 1}
   }
 }
