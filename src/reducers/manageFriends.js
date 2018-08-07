@@ -6,6 +6,6 @@ export function manageFriends(state, action){
       const i = state.friends.findIndex(item => item.id === action.id)
       return { ...state, friends: [...state.friends.slice(0, i),...state.friends.slice(i+1)]}
     default:
-      return { friends: [ { name: 'Avi', hometown: 'NYC', id: 100 } ]}
+      return state;
   }
 }
