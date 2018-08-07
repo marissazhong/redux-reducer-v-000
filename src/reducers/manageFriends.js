@@ -1,8 +1,8 @@
 export function manageFriends(state, action){
   switch (action.type) {
-    case 'INCREASE':
+    case 'ADD_FRIEND':
       return {numberOfPresents: state.numberOfPresents + 1}
     default:
-      return {numberOfPresents: 0}
+      return { friends: [ { name: 'Avi', hometown: 'NYC', id: 100 } ]}
   }
 }
